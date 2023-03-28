@@ -53,8 +53,8 @@ modules:
               - '*'
             sources:
               - type: archive
-                url: https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.18/xfce4-dev-tools-4.18.0.tar.bz2
-                sha256: eedb4fc955f0e3459c46864ff98579295db2b900743e0ff69cad5970ba76be37
+                url: https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.19/xfce4-dev-tools-4.19.0.tar.bz2
+                sha256: ac9fd11f9749303683d80480dac6bbb91c8bf160d8ea5a794bb4f2041eb61d1d
                 x-checker-data:
                   type: anitya
                   project-id: 15888
@@ -84,8 +84,8 @@ modules:
       - --disable-debug
     sources:
       - type: archive
-        url: https://archive.xfce.org/src/xfce/libxfce4ui/4.18/libxfce4ui-4.18.2.tar.bz2
-        sha256: ad602d0427e6c40c3eb53db393c607151a039aec58f1f197712c169c5fe49407
+        url: https://archive.xfce.org/src/xfce/libxfce4ui/4.18/libxfce4ui-4.18.3.tar.bz2
+        sha256: afa3a46eeed3ab612d2f7e1308edaf5819f6c33ccc16c13080efabd58f010abd
         x-checker-data:
           type: anitya
           project-id: 232000
