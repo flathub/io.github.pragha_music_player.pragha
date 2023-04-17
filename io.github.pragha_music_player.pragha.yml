@@ -38,8 +38,8 @@ modules:
           - --disable-debug
         sources:
           - type: archive
-            url: https://archive.xfce.org/src/xfce/libxfce4util/4.18/libxfce4util-4.18.1.tar.bz2
-            sha256: 8a52063a5adc66252238cad9ee6997909b59983ed21c77eb83c5e67829d1b01f
+            url: https://archive.xfce.org/src/xfce/libxfce4util/4.19/libxfce4util-4.19.0.tar.bz2
+            sha256: 1784bced26fa8bdf5104a56f988e848ac25952032603887dc7b95c64b4d35326
             x-checker-data:
               type: anitya
               project-id: 232001
@@ -68,8 +68,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.xfce.org/xfce/xfconf.git
-            tag: xfconf-4.18.0
-            commit: fcbc9b83b8cdc0fba92e8b51ef6e08b43ef89cc6
+            tag: xfconf-4.19.0
+            commit: fe40df842700a5062e4c5a1f7de00e782c299ee4
             x-checker-data:
               type: anitya
               project-id: 14854
