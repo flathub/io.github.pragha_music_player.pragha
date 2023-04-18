@@ -68,8 +68,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.xfce.org/xfce/xfconf.git
-            tag: xfconf-4.18.0
-            commit: fcbc9b83b8cdc0fba92e8b51ef6e08b43ef89cc6
+            tag: xfconf-4.18.1
+            commit: e2ae99a37d1489ffd821e8cc6fc9c7da1fe9405d
             x-checker-data:
               type: anitya
               project-id: 14854
