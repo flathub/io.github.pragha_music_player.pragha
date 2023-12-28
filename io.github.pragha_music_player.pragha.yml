@@ -53,8 +53,8 @@ modules:
               - '*'
             sources:
               - type: archive
-                url: https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.19/xfce4-dev-tools-4.19.0.tar.bz2
-                sha256: ac9fd11f9749303683d80480dac6bbb91c8bf160d8ea5a794bb4f2041eb61d1d
+                url: https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.18/xfce4-dev-tools-4.18.1.tar.bz2
+                sha256: 812cabe7048922ebc176564b73c3e427e467c9566365ee3e54c0487d305a7681
                 x-checker-data:
                   type: anitya
                   project-id: 15888
