@@ -1,6 +1,6 @@
 app-id: io.github.pragha_music_player.pragha
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 command: pragha
 rename-icon: pragha
@@ -43,8 +43,7 @@ modules:
             x-checker-data:
               type: anitya
               project-id: 232001
-              # to be reactivated when libxfce4ui goes to 4.18
-              #stable-only: true
+              stable-only: true
               url-template: https://archive.xfce.org/src/xfce/libxfce4util/$major.$minor/libxfce4util-$version.tar.bz2
       - name: xfconf
         modules:
@@ -84,13 +83,12 @@ modules:
       - --disable-debug
     sources:
       - type: archive
-        url: https://archive.xfce.org/src/xfce/libxfce4ui/4.18/libxfce4ui-4.18.5.tar.bz2
-        sha256: 0dbbf7fc6da07fe743cca020280e1f6cc437cba61698bb0694619fbebf4ee7e7
+        url: https://archive.xfce.org/src/xfce/libxfce4ui/4.18/libxfce4ui-4.18.6.tar.bz2
+        sha256: 77dd99206cc8c6c7f69c269c83c7ee6a037bca9d4a89b1a6d9765e5a09ce30cd
         x-checker-data:
           type: anitya
           project-id: 232000
-          # to be reactivated when it goes to 4.18
-          #stable-only: true
+          stable-only: true
           url-template: https://archive.xfce.org/src/xfce/libxfce4ui/$major.$minor/libxfce4ui-$version.tar.bz2
 
   - name: taglib
@@ -99,8 +97,8 @@ modules:
       - -DBUILD_SHARED_LIBS=ON
     sources:
       - type: archive
-        url: https://github.com/taglib/taglib/releases/download/v1.12/taglib-1.12.tar.gz
-        sha256: 7fccd07669a523b07a15bd24c8da1bbb92206cb19e9366c3692af3d79253b703
+        url: https://github.com/taglib/taglib/releases/download/v1.13.1/taglib-1.13.1.tar.gz
+        sha256: c8da2b10f1bfec2cd7dbfcd33f4a2338db0765d851a50583d410bacf055cfd0b
 
   - name: libcddb
     buildsystem: autotools
@@ -127,8 +125,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/rocky/libcdio-paranoia/archive/release-10.2+2.0.1.tar.gz
-        sha256: 7a4e257c85f3f84129cca55cd097c397364c7a6f79b9701bbc593b13bd59eb95
+        url: https://github.com/libcdio/libcdio-paranoia/releases/download/release-10.2%2B2.0.2/libcdio-paranoia-10.2+2.0.2.tar.gz
+        sha256: 99488b8b678f497cb2e2f4a1a9ab4a6329c7e2537a366d5e4fef47df52907ff6
 
   - name: totem-pl-parser
     buildsystem: meson
@@ -148,14 +146,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/pragha-music-player/pragha
-        tag: v1.3.99.1
-        commit: 073a20c1907aa5d3cefefe7571e7256934ffc94d
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
+        commit: c6459372d14926a7ad63310c2a1df798c9aa980b
       - type: patch
-        path: appdata.patch
-      - type: shell
-        commands:
-          - sed -i 's#  <id>io.github.pragha_music_player</id>#  <id>io.github.pragha_music_player.pragha</id>#'
-            data/io.github.pragha_music_player.metainfo.xml.in
+        path: id-and-metadata.patch
