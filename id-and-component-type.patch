@@ -1,0 +1,27 @@
+diff --git a/data/io.github.pragha_music_player.metainfo.xml.in b/data/io.github.pragha_music_player.metainfo.xml.in
+index 6fc5d619..10624497 100644
+--- a/data/io.github.pragha_music_player.metainfo.xml.in
++++ b/data/io.github.pragha_music_player.metainfo.xml.in
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2014-2019 Matias De lellis -->
+-<component>
+-  <id>io.github.pragha_music_player</id>
++<component type="desktop-application">
++  <id>io.github.pragha_music_player.pragha</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-3.0+</project_license>
+   <_name>Pragha Music Player</_name>
+diff --git a/src/pragha.c b/src/pragha.c
+index 33efd31e..1e461620 100644
+--- a/src/pragha.c
++++ b/src/pragha.c
+@@ -1387,7 +1387,7 @@ PraghaApplication *
+ pragha_application_new ()
+ {
+ 	return g_object_new (PRAGHA_TYPE_APPLICATION,
+-	                     "application-id", "io.github.pragha_music_player",
++	                     "application-id", "io.github.pragha_music_player.pragha",
+ 	                     "flags", G_APPLICATION_HANDLES_COMMAND_LINE | G_APPLICATION_HANDLES_OPEN,
+ 	                     NULL);
+ }
