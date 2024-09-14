@@ -146,6 +146,12 @@ modules:
     sources:
       - type: git
         url: https://github.com/pragha-music-player/pragha
-        commit: c6459372d14926a7ad63310c2a1df798c9aa980b
+        tag: v1.3.99.1
+        commit: 073a20c1907aa5d3cefefe7571e7256934ffc94d
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
       - type: patch
-        path: id-and-metadata.patch
+        path: appdata.patch
+      - type: patch
+        path: id-and-component-type.patch
