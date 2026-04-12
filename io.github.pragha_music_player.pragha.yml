@@ -60,8 +60,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.xfce.org/xfce/xfconf.git
-            tag: xfconf-4.21.0
-            commit: aa1a5b5f327c616eb8d5abe4d458d971461f0576
+            tag: xfconf-4.20.0
+            commit: 078859af53858cddfa99c4b72070a70ed3eb6772
             x-checker-data:
               type: anitya
               project-id: 14854
@@ -142,8 +142,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-3.26.6.tar.xz
-        sha256: c0df0f68d5cf9d7da43c81c7f13f11158358368f98c22d47722f3bd04bd3ac1c
+        url: https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-3.26.7.tar.xz
+        sha256: 60d517c1acabe54ae337f64451264fc76730696eaae26b5480fb37166689b5f3
         x-checker-data:
           type: anitya
           project-id: 13163
