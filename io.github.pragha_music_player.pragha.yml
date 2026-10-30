@@ -47,7 +47,8 @@ modules:
               type: anitya
               project-id: 232001
               stable-only: true
-              url-template: https://archive.xfce.org/src/xfce/libxfce4util/$major.$minor/libxfce4util-$version.tar.bz2
+              url-template: 
+                https://archive.xfce.org/src/xfce/libxfce4util/$major.$minor/libxfce4util-$version.tar.bz2
       - name: xfconf
         buildsystem: meson
         config-opts:
@@ -60,8 +61,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.xfce.org/xfce/xfconf.git
-            tag: xfconf-4.21.0
-            commit: aa1a5b5f327c616eb8d5abe4d458d971461f0576
+            tag: xfconf-4.20.0
+            commit: 078859af53858cddfa99c4b72070a70ed3eb6772
             x-checker-data:
               type: anitya
               project-id: 14854
@@ -73,13 +74,15 @@ modules:
               - '*'
             sources:
               - type: archive
-                url: https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.20/xfce4-dev-tools-4.20.0.tar.bz2
+                url: 
+                  https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.20/xfce4-dev-tools-4.20.0.tar.bz2
                 sha256: 1fba39a08a0ecc771eaa3a3b6e4272a4f0b9e7c67d0f66e780cd6090cd4466aa
                 x-checker-data:
                   type: anitya
                   project-id: 15888
                   stable-only: true
-                  url-template: https://archive.xfce.org/src/xfce/xfce4-dev-tools/$major.$minor/xfce4-dev-tools-$version.tar.bz2
+                  url-template: 
+                    https://archive.xfce.org/src/xfce/xfce4-dev-tools/$major.$minor/xfce4-dev-tools-$version.tar.bz2
 
     cleanup:
       - /bin
@@ -96,7 +99,8 @@ modules:
           type: anitya
           project-id: 232000
           stable-only: true
-          url-template: https://archive.xfce.org/src/xfce/libxfce4ui/$major.$minor/libxfce4ui-$version.tar.bz2
+          url-template: 
+            https://archive.xfce.org/src/xfce/libxfce4ui/$major.$minor/libxfce4ui-$version.tar.bz2
 
   - name: taglib
     buildsystem: cmake-ninja
@@ -135,19 +139,22 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: https://github.com/libcdio/libcdio-paranoia/releases/download/release-10.2%2B2.0.2/libcdio-paranoia-10.2+2.0.2.tar.gz
+        url: 
+          https://github.com/libcdio/libcdio-paranoia/releases/download/release-10.2%2B2.0.2/libcdio-paranoia-10.2+2.0.2.tar.gz
         sha256: 99488b8b678f497cb2e2f4a1a9ab4a6329c7e2537a366d5e4fef47df52907ff6
 
   - name: totem-pl-parser
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-3.26.7.tar.xz
+        url: 
+          https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-3.26.7.tar.xz
         sha256: 60d517c1acabe54ae337f64451264fc76730696eaae26b5480fb37166689b5f3
         x-checker-data:
           type: anitya
           project-id: 13163
-          url-template: https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-$version.tar.xz
+          url-template: 
+            https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-$version.tar.xz
 
   - name: pragha
     sources:
