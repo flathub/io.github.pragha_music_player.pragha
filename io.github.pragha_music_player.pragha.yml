@@ -1,6 +1,6 @@
 app-id: io.github.pragha_music_player.pragha
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: pragha
 rename-icon: pragha
@@ -33,6 +33,22 @@ modules:
   - shared-modules/intltool/intltool-0.51.json
 
   - name: libxfce4ui
+    config-opts:
+      - --disable-debug
+    cleanup:
+      - /bin
+      - /etc
+      - /share/icons
+      - /share/applications
+    sources:
+      - type: archive
+        url: https://archive.xfce.org/src/xfce/libxfce4ui/4.20/libxfce4ui-4.20.2.tar.bz2
+        sha256: 5d3d67b1244a10cee0e89b045766c05fe1035f7938f0410ac6a3d8222b5df907
+        x-checker-data:
+          type: anitya
+          project-id: 232000
+          stable-only: true
+          url-template: https://archive.xfce.org/src/xfce/libxfce4ui/$major.$minor/libxfce4ui-$version.tar.bz2
     modules:
       - name: libxfce4util
         cleanup:
@@ -60,8 +76,8 @@ modules:
         sources:
           - type: git
             url: https://gitlab.xfce.org/xfce/xfconf.git
-            tag: xfconf-4.21.0
-            commit: aa1a5b5f327c616eb8d5abe4d458d971461f0576
+            tag: xfconf-4.21.2
+            commit: a6f0a7aa9073f9d8a0935cee73c0da52b6e49660
             x-checker-data:
               type: anitya
               project-id: 14854
@@ -73,30 +89,13 @@ modules:
               - '*'
             sources:
               - type: archive
-                url: https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.20/xfce4-dev-tools-4.20.0.tar.bz2
-                sha256: 1fba39a08a0ecc771eaa3a3b6e4272a4f0b9e7c67d0f66e780cd6090cd4466aa
+                url: https://archive.xfce.org/src/xfce/xfce4-dev-tools/4.21/xfce4-dev-tools-4.21.2.tar.bz2
+                sha256: a43f726a082b589186d9e6ed076101d41249d1e22bbe61448037550190d7f75a
                 x-checker-data:
                   type: anitya
                   project-id: 15888
                   stable-only: true
                   url-template: https://archive.xfce.org/src/xfce/xfce4-dev-tools/$major.$minor/xfce4-dev-tools-$version.tar.bz2
-
-    cleanup:
-      - /bin
-      - /etc
-      - /share/icons
-      - /share/applications
-    config-opts:
-      - --disable-debug
-    sources:
-      - type: archive
-        url: https://archive.xfce.org/src/xfce/libxfce4ui/4.20/libxfce4ui-4.20.2.tar.bz2
-        sha256: 5d3d67b1244a10cee0e89b045766c05fe1035f7938f0410ac6a3d8222b5df907
-        x-checker-data:
-          type: anitya
-          project-id: 232000
-          stable-only: true
-          url-template: https://archive.xfce.org/src/xfce/libxfce4ui/$major.$minor/libxfce4ui-$version.tar.bz2
 
   - name: taglib
     buildsystem: cmake-ninja
@@ -156,6 +155,7 @@ modules:
         tag: v1.3.99.1
         commit: 073a20c1907aa5d3cefefe7571e7256934ffc94d
         x-checker-data:
+          is-main-source: true
           type: git
           tag-pattern: ^v([\d.]+)$
       - type: patch
